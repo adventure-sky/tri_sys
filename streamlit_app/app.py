@@ -65,7 +65,7 @@ def show_login():
             pwd = st.text_input("密碼", type="password")
             if st.form_submit_button("登入", use_container_width=True):
                 rows = db_query(
-                    "SELECT userid, username FROM [user] WHERE userid=? AND pwd=?",
+                    "SELECT userid, username FROM [user] WHERE userid=%s AND pwd=%s",
                     (userid, pwd)
                 )
                 if rows:

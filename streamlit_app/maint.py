@@ -35,7 +35,7 @@ def maint_page(title, table, key_field, fields):
                 else:
                     try:
                         cols = ", ".join(f["name"] for f in fields)
-                        placeholders = ", ".join("?" * len(fields))
+                        placeholders = ", ".join(["%s"] * len(fields))
                         db_exec(
                             f"INSERT INTO [{table}] ({cols}) VALUES ({placeholders})",
                             [values[f["name"]] for f in fields]
@@ -64,7 +64,7 @@ def maint_page(title, table, key_field, fields):
                 if st.form_submit_button("儲存修改"):
                     try:
                         set_clause = ", ".join(
-                            f"{f['name']}=?" for f in fields if f["name"] != key_field
+                            f"{f['name']}=%s" for f in fields if f["name"] != key_field
                         )
                         params = [values[f["name"]] for f in fields if f["name"] != key_field]
                         params.append(rec[key_field])
@@ -86,7 +86,7 @@ def maint_page(title, table, key_field, fields):
             st.json(rec2)
             if st.button("確定刪除", type="primary", key=f"{table}_del_btn"):
                 try:
-                    db_exec(f"DELETE FROM [{table}] WHERE {key_field}=?", (selected2,))
+                    db_exec(f"DELETE FROM [{table}] WHERE {key_field}=%s", (selected2,))
                     st.success("刪除成功")
                     st.rerun()
                 except Exception as e:

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type="text/javascript" nonce="9395611d5164434cbb941532a79" src="//local.adguard.org?ts=1774621447446&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2FmOGMxNDg4ZmIxMzRkOTVhYTYwZmNkYTdjZDU0MzQ2EgsSBxCvztjV-RQYAZIBIwoKcHJvamVjdF9pZBIVQhMzNjg2MDU4ODYwNzE5MjU0MDQy%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="9395611d5164434cbb941532a79" src="//local.adguard.org?ts=1774621447446&amp;name=AdGuard%20Extra&amp;type=user-script"></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f2f4f7",
+              "on-primary-container": "#fefcff",
+              "outline-variant": "#c0c7d6",
+              "secondary-fixed-dim": "#d5baff",
+              "on-tertiary-fixed": "#311300",
+              "on-background": "#191c1e",
+              "error-container": "#ffdad6",
+              "primary-container": "#0075d5",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#a5c8ff",
+              "secondary-fixed": "#ecdcff",
+              "inverse-surface": "#2d3133",
+              "surface-container-highest": "#e0e3e6",
+              "primary": "#005daa",
+              "tertiary-fixed": "#ffdbc7",
+              "outline": "#707785",
+              "surface-container-high": "#e6e8eb",
+              "surface-container": "#eceef1",
+              "secondary-container": "#8e4fee",
+              "on-error": "#ffffff",
+              "background": "#f7f9fc",
+              "surface": "#f7f9fc",
+              "error": "#ba1a1a",
+              "surface-dim": "#d8dadd",
+              "surface-tint": "#005fae",
+              "inverse-on-surface": "#eff1f4",
+              "on-secondary-fixed": "#270057",
+              "on-surface": "#191c1e",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#001c3a",
+              "on-secondary-container": "#fffbff",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#5e08bd",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb688",
+              "on-tertiary-container": "#fffbff",
+              "inverse-primary": "#a5c8ff",
+              "on-surface-variant": "#404753",
+              "on-tertiary-fixed-variant": "#733600",
+              "surface-variant": "#e0e3e6",
+              "tertiary": "#934600",
+              "tertiary-container": "#b95a00",
+              "secondary": "#7431d3",
+              "on-primary-fixed-variant": "#004785",
+              "primary-fixed": "#d4e3ff",
+              "surface-bright": "#f7f9fc"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar (Authority: JSON & Design System) -->
+<nav class="bg-[#001529] dark:bg-[#001529] font-['Inter'] antialiased text-sm leading-6 tracking-tight docked full-width top-0 z-50 no-border tonal-shift shadow-lg shadow-blue-900/10 flex justify-between items-center w-full px-8 h-16 fixed">
+<div class="text-xl font-bold text-white tracking-tight flex items-center gap-3">
+<span class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">layers</span>
+</span>
+            三層式資料維護系統
+        </div>
+<div class="flex items-center space-x-6">
+<span class="text-slate-300">歡迎，[用戶名稱]</span>
+<button class="bg-white/10 hover:bg-white/20 text-white px-4 py-1.5 rounded transition-all duration-200 active:scale-95">
+                登出
+            </button>
+</div>
+</nav>
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="bg-[#001529] dark:bg-[#000d1a] font-['Inter'] text-sm font-medium fixed left-0 top-16 h-[calc(100vh-64px)] w-64 no-border shadow-2xl shadow-black/20 flex flex-col border-r border-white/5">
+<div class="p-6">
+<div class="text-lg font-black text-white">資料管理</div>
+<div class="text-xs text-slate-500 mt-1">V2.4.0</div>
+</div>
+<nav class="flex-1 mt-2">
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white py-3 px-6 transition-all hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>主選單</span>
+</a>
+<!-- Active State: 客戶資料維護 maps to 資料維護 -->
+<a class="flex items-center space-x-3 text-white bg-blue-600/10 border-l-4 border-blue-500 py-3 px-6 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+<span>資料維護</span>
+</a>
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white py-3 px-6 transition-all hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>系統設定</span>
+</a>
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white py-3 px-6 transition-all hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>報表查詢</span>
+</a>
+</nav>
+<div class="p-6 border-t border-white/5">
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white transition-all active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+<span>← 返回主選單</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 p-8 min-h-screen">
+<!-- Breadcrumb / Back Navigation -->
+<div class="mb-6 flex items-center justify-between">
+<button class="group flex items-center text-on-surface-variant hover:text-primary transition-colors text-sm font-medium">
+<span class="material-symbols-outlined mr-2 text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                ← 返回主選單
+            </button>
+</div>
+<!-- Content Area White Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_rgba(0,93,170,0.06)] overflow-hidden">
+<!-- Page Header Section -->
+<div class="px-8 pt-8 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<h1 class="text-[1.125rem] font-bold text-on-surface flex items-center gap-2">
+<span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                    客戶資料維護
+                </h1>
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-highest border-none rounded focus:ring-2 focus:ring-primary/20 w-64 text-sm transition-all" placeholder="搜尋..." type="text"/>
+</div>
+<button class="bg-gradient-to-b from-primary to-primary-container text-white px-5 py-2 rounded font-medium flex items-center gap-2 hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg">add</span>
+                        新增
+                    </button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="px-8 pb-8">
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left text-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-semibold">
+<th class="px-6 py-4">客戶代碼</th>
+<th class="px-6 py-4">客戶名稱</th>
+<th class="px-6 py-4">備註說明</th>
+<th class="px-6 py-4 text-center">操作</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="bg-white hover:bg-surface-container/50 transition-colors">
+<td class="px-6 py-4 font-mono text-primary font-medium">CUST-2024-001</td>
+<td class="px-6 py-4 font-semibold">台積電工業股份有限公司</td>
+<td class="px-6 py-4 text-on-surface-variant">長期合作夥伴，半導體產業首選。</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="text-primary hover:bg-primary/5 px-3 py-1 rounded transition-colors flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-base">edit</span>
+                                            修改
+                                        </button>
+<button class="text-error hover:bg-error/5 px-3 py-1 rounded transition-colors flex items-center gap-1 border border-error/20">
+<span class="material-symbols-outlined text-base">delete</span>
+                                            刪除
+                                        </button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low hover:bg-surface-container/80 transition-colors">
+<td class="px-6 py-4 font-mono text-primary font-medium">CUST-2024-002</td>
+<td class="px-6 py-4 font-semibold">鴻海精密工業</td>
+<td class="px-6 py-4 text-on-surface-variant">全球性電子代工大廠，定期維護合約。</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="text-primary hover:bg-primary/5 px-3 py-1 rounded transition-colors flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-base">edit</span>
+                                            修改
+                                        </button>
+<button class="text-error hover:bg-error/5 px-3 py-1 rounded transition-colors flex items-center gap-1 border border-error/20">
+<span class="material-symbols-outlined text-base">delete</span>
+                                            刪除
+                                        </button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-white hover:bg-surface-container/50 transition-colors">
+<td class="px-6 py-4 font-mono text-primary font-medium">CUST-2024-003</td>
+<td class="px-6 py-4 font-semibold">聯發科技股份有限公司</td>
+<td class="px-6 py-4 text-on-surface-variant">晶片設計領導品牌，高優先級支援。</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="text-primary hover:bg-primary/5 px-3 py-1 rounded transition-colors flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-base">edit</span>
+                                            修改
+                                        </button>
+<button class="text-error hover:bg-error/5 px-3 py-1 rounded transition-colors flex items-center gap-1 border border-error/20">
+<span class="material-symbols-outlined text-base">delete</span>
+                                            刪除
+                                        </button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-low hover:bg-surface-container/80 transition-colors">
+<td class="px-6 py-4 font-mono text-primary font-medium">CUST-2024-004</td>
+<td class="px-6 py-4 font-semibold">長榮海運</td>
+<td class="px-6 py-4 text-on-surface-variant">物流體系整合服務，年度預算規劃中。</td>
+<td class="px-6 py-4">
+<div class="flex justify-center items-center gap-2">
+<button class="text-primary hover:bg-primary/5 px-3 py-1 rounded transition-colors flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-base">edit</span>
+                                            修改
+                                        </button>
+<button class="text-error hover:bg-error/5 px-3 py-1 rounded transition-colors flex items-center gap-1 border border-error/20">
+<span class="material-symbols-outlined text-base">delete</span>
+                                            刪除
+                                        </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer / Pagination -->
+<div class="mt-6 flex items-center justify-between border-t border-outline-variant/10 pt-6">
+<div class="flex items-center gap-4">
+<nav class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-high transition-colors text-outline">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-primary text-white font-bold text-xs shadow-sm shadow-primary/20">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-high transition-colors text-xs font-medium">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-high transition-colors text-xs font-medium">3</button>
+<span class="px-2 text-outline">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded hover:bg-surface-container-high transition-colors text-outline">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</nav>
+</div>
+<div class="text-on-surface-variant text-sm font-medium bg-surface-container px-4 py-1.5 rounded-full">
+                        共 <span class="text-primary font-bold mx-1">42</span> 筆
+                    </div>
+</div>
+</div>
+</div>
+<!-- System Stats / Bento Style Context -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-primary/5 p-6 rounded-xl border border-primary/10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">person_add</span>
+</div>
+<div>
+<div class="text-label-md text-on-surface-variant">本月新增客戶</div>
+<div class="text-headline-sm font-bold text-primary">12</div>
+</div>
+</div>
+</div>
+<div class="bg-secondary/5 p-6 rounded-xl border border-secondary/10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-secondary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<div class="text-label-md text-on-surface-variant">活躍客戶佔比</div>
+<div class="text-headline-sm font-bold text-secondary">88%</div>
+</div>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-xl border border-white/20 shadow-sm relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<div class="text-label-md text-on-surface-variant">系統最後維護時間</div>
+<div class="text-body-md font-semibold mt-1">2024-05-20 14:30:05</div>
+<div class="text-xs text-primary mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">sync</span>
+                    系統運作正常
+                </div>
+</div>
+</div>
+</main>
+</body></html>

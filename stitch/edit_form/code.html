@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type="text/javascript" nonce="9395611d5164434cbb941532a79" src="//local.adguard.org?ts=1774621447446&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzc0ZjFiMWE1MzUwMjRmMGE4Y2JkNTE1ZjEyZGFlNjY2EgsSBxCvztjV-RQYAZIBIwoKcHJvamVjdF9pZBIVQhMzNjg2MDU4ODYwNzE5MjU0MDQy%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="9395611d5164434cbb941532a79" src="//local.adguard.org?ts=1774621447446&amp;name=AdGuard%20Extra&amp;type=user-script"></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f2f4f7",
+              "on-primary-container": "#fefcff",
+              "outline-variant": "#c0c7d6",
+              "secondary-fixed-dim": "#d5baff",
+              "on-tertiary-fixed": "#311300",
+              "on-background": "#191c1e",
+              "error-container": "#ffdad6",
+              "primary-container": "#0075d5",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#a5c8ff",
+              "secondary-fixed": "#ecdcff",
+              "inverse-surface": "#2d3133",
+              "surface-container-highest": "#e0e3e6",
+              "primary": "#005daa",
+              "tertiary-fixed": "#ffdbc7",
+              "outline": "#707785",
+              "surface-container-high": "#e6e8eb",
+              "surface-container": "#eceef1",
+              "secondary-container": "#8e4fee",
+              "on-error": "#ffffff",
+              "background": "#f7f9fc",
+              "surface": "#f7f9fc",
+              "error": "#ba1a1a",
+              "surface-dim": "#d8dadd",
+              "surface-tint": "#005fae",
+              "inverse-on-surface": "#eff1f4",
+              "on-secondary-fixed": "#270057",
+              "on-surface": "#191c1e",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#001c3a",
+              "on-secondary-container": "#fffbff",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#5e08bd",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb688",
+              "on-tertiary-container": "#fffbff",
+              "inverse-primary": "#a5c8ff",
+              "on-surface-variant": "#404753",
+              "on-tertiary-fixed-variant": "#733600",
+              "surface-variant": "#e0e3e6",
+              "tertiary": "#934600",
+              "tertiary-container": "#b95a00",
+              "secondary": "#7431d3",
+              "on-primary-fixed-variant": "#004785",
+              "primary-fixed": "#d4e3ff",
+              "surface-bright": "#f7f9fc"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased overflow-hidden">
+<!-- TopNavBar -->
+<header class="bg-[#001529] dark:bg-[#001529] font-['Inter'] antialiased text-sm leading-6 tracking-tight docked full-width top-0 z-50 shadow-lg shadow-blue-900/10 flex justify-between items-center w-full px-8 h-16 fixed">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold text-white">三層式資料維護系統</span>
+</div>
+<div class="flex items-center space-x-6">
+<span class="text-slate-300">歡迎，[用戶名稱]</span>
+<button class="text-white hover:bg-white/10 transition-all duration-200 px-4 py-1.5 rounded-lg active:opacity-80 transition-transform scale-95">登出</button>
+</div>
+</header>
+<div class="flex h-screen pt-16">
+<!-- SideNavBar -->
+<aside class="bg-[#001529] dark:bg-[#000d1a] fixed left-0 top-16 h-[calc(100vh-64px)] w-64 flex flex-col border-r border-white/5 shadow-2xl shadow-black/20 z-40">
+<div class="p-6">
+<h2 class="text-lg font-black text-white">資料管理</h2>
+<p class="text-xs text-blue-500 font-medium">V2.4.0</p>
+</div>
+<nav class="flex-1 mt-4">
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white py-3 px-6 transition-all hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-sm font-medium">主選單</span>
+</a>
+<a class="flex items-center space-x-3 text-white bg-blue-600/10 border-l-4 border-blue-500 py-3 px-6 transition-all active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+<span class="font-['Inter'] text-sm font-medium">資料維護</span>
+</a>
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white py-3 px-6 transition-all hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-sm font-medium">系統設定</span>
+</a>
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white py-3 px-6 transition-all hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] text-sm font-medium">報表查詢</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-white/10">
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white py-4 px-6 transition-all hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+<span class="font-['Inter'] text-sm font-medium">← 返回主選單</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 p-10 overflow-y-auto bg-surface">
+<!-- Breadcrumbs -->
+<nav class="flex mb-8 text-label-md text-on-surface-variant gap-2 items-center">
+<span>資料維護</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-medium">客戶資料維護</span>
+</nav>
+<!-- Page Header Section -->
+<div class="mb-10 flex justify-between items-end">
+<div>
+<h1 class="text-[1.5rem] font-bold text-on-surface tracking-tight leading-tight">客戶資料維護</h1>
+<p class="text-body-md text-on-surface-variant mt-1">管理並更新您的核心客戶資料庫，確保資訊的準確性。</p>
+</div>
+<!-- Status Toast (Simulated Context) -->
+<div class="flex items-center gap-3 bg-green-50 px-4 py-2 rounded-xl border border-green-100 animate-pulse">
+<span class="material-symbols-outlined text-green-600 text-sm">check_circle</span>
+<span class="text-green-700 font-medium text-sm">系統狀態：連線中</span>
+</div>
+</div>
+<!-- Bento Grid Layout for Form & Context -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Main Form Card (The Content Area White Card) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-lg shadow-blue-900/[0.03] overflow-hidden">
+<div class="px-8 py-6 bg-surface-container-low/50 border-b border-outline-variant/10">
+<h2 class="text-[1.125rem] font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="edit_square">edit_square</span>
+                            修改 客戶資料維護
+                        </h2>
+</div>
+<form class="p-8 space-y-8">
+<!-- Vertical Form Fields -->
+<div class="space-y-6">
+<!-- Read-only field -->
+<div class="space-y-2">
+<label class="text-[0.875rem] font-semibold text-on-surface flex items-center gap-2">
+                                    客戶代碼
+                                    <span class="material-symbols-outlined text-[14px] text-on-surface-variant" title="唯讀資訊">info</span>
+</label>
+<div class="bg-surface-container-highest px-4 py-3 rounded-lg border border-outline-variant/20 text-on-surface-variant font-mono text-sm">
+                                    CUST-2024-0892
+                                </div>
+</div>
+<!-- Text input -->
+<div class="space-y-2">
+<label class="text-[0.875rem] font-semibold text-on-surface">客戶名稱</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none text-on-surface" placeholder="請輸入客戶名稱" type="text" value="華碩雲端股份有限公司"/>
+</div>
+<!-- Text area -->
+<div class="space-y-2">
+<label class="text-[0.875rem] font-semibold text-on-surface">備註說明</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none text-on-surface resize-none" placeholder="請輸入相關備註事項..." rows="4">長期合作夥伴，優先處理其雲端架構維護需求。2024年度預計擴大合作規模。</textarea>
+</div>
+</div>
+<!-- Messages Area -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-green-600 text-sm font-medium">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                                儲存成功
+                            </div>
+<!-- 
+                            <div class="flex items-center gap-2 text-error text-sm font-medium">
+                                <span class="material-symbols-outlined text-[18px]">error</span>
+                                輸入錯誤
+                            </div> 
+                            -->
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-4 pt-6 border-t border-outline-variant/10">
+<button class="bg-gradient-to-b from-primary to-primary-container text-white px-8 py-2.5 rounded-lg font-semibold text-sm hover:brightness-110 active:scale-95 transition-all shadow-md shadow-primary/20" type="submit">
+                                儲存
+                            </button>
+<button class="bg-white border border-outline-variant/60 text-on-surface-variant px-8 py-2.5 rounded-lg font-semibold text-sm hover:bg-surface-container-low active:scale-95 transition-all" type="button">
+                                取消
+                            </button>
+</div>
+</form>
+</div>
+<!-- Secondary Visual Sidebar (Bento Style) -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Preview Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-lg shadow-blue-900/[0.03] p-6 relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all"></div>
+<h3 class="text-sm font-bold text-on-surface mb-4">資料摘要</h3>
+<div class="flex items-center gap-4 mb-6">
+<img class="w-16 h-16 rounded-full object-cover ring-4 ring-primary/10" data-alt="Corporate office building facade with glass windows and modern architecture under clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACEtHoFClnSVddYTgZS5xmYmJQZxVp-ql2hfAua3NR-obB3jwRY9XmBzvFtvZLdTrpHDZzC0xyqhXEHzkwFfdx9JWr8rqC5QRXosuxhPQghbS91DGV4kcNG8wxhFCeB0g_7em2u88S8soRRs5iokdqqRVdEQxQEBrQh6y-NwKnvzMO2ocx-nt1CkRqBXmstL2zq3sKZsenp3Zf4hp7R-MFXVx_rZsgKgmSTwi8nfaWuclZ7wPed1_rHIRLbXUqnKsVqe7OL8_TiAk"/>
+<div>
+<p class="text-sm font-bold text-on-surface">華碩雲端</p>
+<p class="text-xs text-on-surface-variant">最後更新: 2024-05-20</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs py-2 border-b border-outline-variant/10">
+<span class="text-on-surface-variant">信譽評等</span>
+<span class="text-primary font-bold">AAA</span>
+</div>
+<div class="flex justify-between text-xs py-2 border-b border-outline-variant/10">
+<span class="text-on-surface-variant">帳單狀態</span>
+<span class="text-green-600 font-bold">正常</span>
+</div>
+</div>
+</div>
+<!-- Visual Context Card -->
+<div class="rounded-xl overflow-hidden shadow-lg shadow-blue-900/[0.03] h-48 relative">
+<img class="w-full h-full object-cover" data-alt="Professional office workspace with ergonomic chairs and monitors in a clean minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADIauJ56Pf0DzJKASpJByUuZMQ_AanNmZzX1XzSQOVvsdll2nSe7HqXLkzg0RzAg7X4LFQLiv4y8RP5rzk1KVYSkpu-9lFNKVWgemEu85045vvvvvm2FXnZSGOP8pe8p0n-RctU_ZZrRItGOAiUg8dy5sd_J15FanSdbuFeRyn3xTjchyRRyEYxT3lWQGhVCiIkjzAY2ttoUMvbn53_3ZQSZvyDhCvBQhVq_1hTLdW3dNFId6Y9WUv5SPuUEUtlvh3YJZjKsNShvs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-6">
+<p class="text-white text-xs font-medium">優化您的維護流程，提升 30% 工作效率</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
